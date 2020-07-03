@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MenuParqueadero {
 	
+	private static final long TASA_REFRESCO_ESTATUS_PARQUEADERO = 30000;
 	private static final int SALIR = 0;
 	private static final int REGISTRAR_ENTRADA = 1;
 	private static final int REGISTRAR_SALIDA = 2;
@@ -19,7 +20,7 @@ public class MenuParqueadero {
 	
 	private static void menu(Parqueadero parqueadero) {
 		Scanner lectorTeclado = new Scanner(System.in);
-		EstatusParqueadero estatus = new EstatusParqueadero(parqueadero);
+		EstatusParqueadero estatus = new EstatusParqueadero(parqueadero, TASA_REFRESCO_ESTATUS_PARQUEADERO);
 		
 		int opcion = 0;
 		do {

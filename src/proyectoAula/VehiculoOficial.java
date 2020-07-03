@@ -21,11 +21,14 @@ public class VehiculoOficial extends Vehiculo {
 
 	@Override
 	public long calcularPago() {
-		return estancias.stream().mapToInt(estancia -> {return estancia.calcularMinutosEstancia() * this.getTarifaMinuto();}).count();
+		return estancias.stream().mapToInt(estancia -> {return estancia.calcularMinutosEstancia() * this.getTarifaMinuto();}).sum();
 	}
 	
 	public void limpiarEstancias() {
 		estancias.clear();
 	}
 
+	public List<Estancia> getEstancias() {
+		return estancias;
+	}
 }

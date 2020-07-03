@@ -46,7 +46,4 @@ public abstract class Vehiculo {
 	public int getTarifaMinuto() {
 		return tarifaMinuto;
 	}
-	public void setTarifaMinuto(int tarifaMinuto) {
-		this.tarifaMinuto = tarifaMinuto;
-	}
 }

@@ -14,8 +14,10 @@ public class Estancia {
 	}
 	
 	public static int calcularMinutosEstancia(Date horaSalida, Date horaEntrada) {
-		long diferencia = horaSalida.getTime() - horaEntrada.getTime(); 
-		return (int) (diferencia / CONVERSOR_MILISEGUNDOS_A_MINUTOS  % 60);
+		Estancia estancia = new Estancia();
+		estancia.setHoraEntrada(horaEntrada);
+		estancia.setHoraSalida(horaSalida);
+		return estancia.calcularMinutosEstancia();
 	}
 	
 	public Date getHoraEntrada() {

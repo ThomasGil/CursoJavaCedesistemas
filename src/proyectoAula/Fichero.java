@@ -31,7 +31,7 @@ public class Fichero {
 		informe.append(generarSeparador());
 		
 		System.out.println(informe.toString());
-		guardarInformeEnFichero(nombreFichero, informe.toString());
+		if(!residentes.isEmpty()) guardarInformeEnFichero(nombreFichero, informe.toString());
 	}
 	
 	public static void generarInformeNoResidente(VehiculoNoResidente vehiculo) {

@@ -5,10 +5,12 @@ import java.util.Date;
 public class EstatusParqueadero extends Thread {
 
 	private Parqueadero parqueadero;
+	private long tasaRefresco;
 	private boolean ejecutar;
 	
-	public EstatusParqueadero(Parqueadero parqueadero) {
+	public EstatusParqueadero(Parqueadero parqueadero, long tasaRefresco) {
 		this.parqueadero = parqueadero;
+		this.tasaRefresco = tasaRefresco;
 		this.start();
 	}
 	
@@ -18,7 +20,7 @@ public class EstatusParqueadero extends Thread {
 		while(ejecutar) {
 			try {
 				mostrarVehiculosAparcados();
-				sleep(30000L);
+				sleep(tasaRefresco);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
